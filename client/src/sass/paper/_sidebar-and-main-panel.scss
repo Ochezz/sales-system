@@ -1,0 +1,286 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center center;
+  .sidebar-wrapper {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 260px;
+    z-index: 4;
+    box-shadow: inset -1px 0px 0px 0px $medium-gray;
+
+    .logo-under-id-wrap {
+      margin: 0 20px;
+      padding: 15px 0;
+      text-align: left;
+      
+      > div {
+        color: $white-color;
+        font-weight: 600;
+        opacity: .7;
+      }
+    }
+
+    .logo-under-btn-wrap {
+      height: 40px;
+      margin: 0 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .3);
+      
+      > a {
+        cursor: pointer;
+        @include transition($fast-transition-time, $transition-linear);
+        padding: 10px 0px !important;
+        opacity: .7 !important;
+        
+        color: $white-color !important;
+        font-weight: 600 !important;
+      }
+
+      a:hover {
+        opacity: 1 !important;
+      }
+    }
+  }
+  .sidebar-background {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+  }
+
+}
+
+.sidebar,
+.off-canvas-sidebar {
+  width: 260px;
+  display: block;
+  font-weight: 200;
+
+  .logo {
+    padding: 13px 0;
+    margin: 0 20px;
+
+    p {
+      float: left;
+      font-size: 20px;
+      margin: 10px 10px;
+      line-height: 20px;
+    }
+
+    .simple-text {
+      padding: $padding-small-vertical $padding-zero;
+      display: block;
+      font-size: $font-size-base;
+      text-align: center;
+      font-weight: $font-weight-bold;
+      line-height: 40px;
+      text-align: left;
+
+      img{
+        // max-width: 21px;
+        width: 100%;
+        height: 100%;
+      }
+
+      // .logo-img{
+      //     width: 40px;
+      //     display: inline-block;
+      //     height: 40px;
+      //     margin-left: 0px;
+      //     margin-right: 10px;
+      //     background: white;
+      //     border-radius: 40px;
+      //     text-align: center;
+      // }
+    }
+  }
+
+  .nav {
+    //margin-top: 20px;
+
+    div 
+      > .open > a {
+        background-color: rgba(30, 30, 30, 0);
+      }
+
+    .sidebardropdown {
+      > a {
+        padding: 0px 25px;
+        margin: 20px 0px;
+      }
+    }
+
+    .sidebardropdown-menu {
+      transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1);
+
+      > li {
+        > a {
+          padding: 0px 25px;
+          margin: 0px 0px;
+          
+          > p {
+            margin: 0;
+            padding: 0;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+
+    li {
+      > a {
+        position: relative;
+        display: block;
+        padding: 0px 25px;
+        margin: 20px 0px;
+        padding-left: 25px;
+        padding-right: 25px;
+        opacity: .7;
+      }
+
+      &:hover > a {
+        opacity: 1;
+      }
+
+      &.active > a {
+        color: $primary-color;
+        opacity: 1;
+      }
+
+      > ul {
+        p {
+          line-height: 0;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      line-height: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    i {
+      font-size: 24px;
+      float: left;
+      margin-right: 15px;
+      line-height: 30px;
+      width: 30px;
+      text-align: center;
+    }
+  }
+
+  &:after,
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: $white-background-color;
+  }
+
+  &,
+  &[data-background-color="white"] {
+    @include sidebar-background-color($white-background-color, $default-color);
+  }
+  &[data-background-color="black"] {
+    @include sidebar-background-color($black-background-color, $white-color);
+  }
+  &[data-background-color="darkblue"] {
+    @include sidebar-background-color($darkblue-background-color, $white-color);
+  }
+
+  &[data-active-color="primary"] {
+    @include sidebar-active-color($primary-color);
+  }
+  &[data-active-color="info"] {
+    @include sidebar-active-color($info-color);
+  }
+  &[data-active-color="success"] {
+    @include sidebar-active-color($success-color);
+  }
+  &[data-active-color="warning"] {
+    @include sidebar-active-color($warning-color);
+  }
+  &[data-active-color="danger"] {
+    @include sidebar-active-color($danger-color);
+  }
+
+}
+
+.main-panel {
+  background-color: $bg-nude;
+  position: relative;
+  z-index: 2;
+  float: right;
+  width: $sidebar-width;
+  min-height: 100%;
+
+  > .content {
+    padding: 30px 15px;
+    min-height: calc(100% - 123px);
+  }
+
+  > .footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+}
+
+.sidebar,
+.main-panel {
+  -webkit-transition-property: top, bottom;
+  transition-property: top, bottom;
+  -webkit-transition-duration: .2s, .2s;
+  transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: linear, linear;
+  transition-timing-function: linear, linear;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar {
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.update-header-wrap {
+  margin-bottom: 15px;
+  text-align: right;
+
+  button {
+    background-color: $white-bg;
+    border: 1px solid #c8cdd4;
+    padding: 0.5rem 1rem;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: all .2s;
+  }
+
+  button:hover {
+    border: 1px solid $info-color;
+  }
+}

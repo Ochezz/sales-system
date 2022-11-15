@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록 페이지</title>
+    <script>
+        window.onload = function() {
+            document.getElementById('registBtn').onclick = function() {
+              post();
+            };
+          
+            xhr = new XMLHttpRequest();
+          
+            xhr.onload = function (e) {
+              if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    let response = JSON.parse(xhr.response);
+                    if(response.registSuccess){
+                        var answer = document.getElementById('answer');
+                        answer.innerHTML = `${response.nickName} 등록 성공`;
+                    }
+                }
+              }
+            };
+          };
+          
+          function post() {
+            xhr.open('POST', '/api/user/rootUserRegist/', true);
+            xhr.setRequestHeader('content-type', 'application/json;charset=UTF-8');
+            
+            let user = new Object();
+            user.id = document.getElementById('id').value;
+            user.password = document.getElementById('password').value;
+            
+            user.profile = 0;
+            user.name = document.getElementById('name').value;
+            user.phone = document.getElementById('phone').value;
+            user.officePhone = document.getElementById('officePhone').value;
+            user.rank = document.getElementById('rank').value;
+            user.email = document.getElementById('email').value;
+            user.memo = document.getElementById('memo').value;
+
+            let data = new Object();
+            data.user = user;
+            
+            xhr.send(JSON.stringify(data));
+          }
+    </script>
+</head>
+<body>
+    <h2>최고 관리자 등록</h2>
+    <br/>
+    <p>아이디<input type="text" id="id"></p>
+    <p>비밀번호<input type="text" id="password"></p>
+    <p>이름<input type="text" id="name"></p>
+    <p>전화번호<input type="text" id="phone"></p>
+    <p>사내번호<input type="text" id="officePhone"></p>
+    <p>직급<input type="text" id="rank"></p>
+    <p>이메일<input type="text" id="email"></p>
+    <p>메모<input type="text" id="memo"></p>
+    <br/>
+    <button id="registBtn">등록</button> 
+    <br/><br/>
+    <p id="answer"></p>
+
+</body>
+</html>

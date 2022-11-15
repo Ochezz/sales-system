@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sales-system-ga-report-api",
+  "private_key_id": "bf62d065c966920aa672ac170162fa939e4b181d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCtTtjWmZ4z07Y4\nvg5CmePMzvq6+f8WUDVakIib2T2kKNz2voy87MqdhDsOu8PA/aHhhfReYJpsg0iz\nIr8lFkVMPJCBpwkGkkKpjqXudVAc57v9EpFP/qmBeC1iyQyBDaExPEx4L9cwrItS\nOJGU9mNhT8mkB2Pj5TDOYepNoQxO/RORe26NvgDHUGJF8jrMAx111shxmjFRKjHc\nYieRBxe34zWHn89CQi1DfHc9eQxCQS0MSf5XzVb0rL2eE846J90qJD7RO31lJv5B\nv8rwxf4RXzbvPeBlxtrR0Yw4dwnmIeRKfJMwLoGlXB/JSbVt55dHI0EnwpE06bU8\n+fQjTdFBAgMBAAECggEAAzk7OUqkMayXcBjA5SY9oXqcGUw7HWwigeu8TsHMrrf/\n3CsRLRZucl2aR5zgeD9/elVmhTbgyHHssUBNM+BlK5TYz0CPH2srCEJZ/cR61/7L\ndVqaD1XaS0kz9ulsbR4WyHapqXaiVwpukPnyY0Xt9Uppor5scjm6HayekhETzIhK\ns0/UZwg2fPfILGGt1kR3cX60U+ZCFNAnNCnNXhOHi21Eud74kzL2Dq57TNO3jj0S\nWoTiXzfNL/jOJbGt1ydjfeipD6hKB6nP79N0sG8N1mbaV/l0mFnp2MPi1TnCkXwU\nG797L9h2JybhsR9ZIIt1X3Cb5MyFW0FZSu0q/gjJAQKBgQDdqQokN7ld/1ByL0cY\nNXs3sKc+VOnEgNU1XpQNQ4TwLdoUqLpalIxprkW90XUBr5K8h3ypIxu+xx89JPr9\nx+eRSOUG313TmmHkK+RCFzzYl+y7ACK/x99n5n+MNNdmTVviyEYr8stiZQoPO56U\n2gGx9TGKopFY7L4FwAeDYEPlEQKBgQDIKCx3uhATukrhkEtTUjblJffssGlyQlEz\n3fzStyoH1k7RqxaBCIftqNdiael/+hVt3+VL8aootg9DC7gZJOuHCiqk30/DbEyk\nIwFwF4rE/CMnjAY3jF3aGcnKBMJVbB2qLoFjz6Bx3ZwFNkvw7aiXN+gxShfGtugo\nZR6PK6tpMQKBgBfg4erM5fcuTeg/F5WQDVoOebXJR/WXO2Coc6KKJ4QILHoVQx4G\n6qln0LOGIOixlUkh/1fpJFAE+2SG21MDefq4s5Nt9JmbA/ikkc5c2n0qwKHUfenT\nCkoTFqJv/tRSeReRI54QZcCPyemiLo8yfQRCubeJk8bUmhPcf/KzKB1BAoGBAJTB\nnsLgqsAurSZU+laTfK7zd/4V4liDxxv4OMVWUct/UBbtw4zkjTlpSaIfuuVdNP3y\n79RwaBlXraITnKA7WzyCpszgFsTTwWYfihsHtB/QkEP9AkXYcYv9rIYS4WdhMe7g\nH1PR5JmbrTAGeYw25Rx19YBkY6VRHNugw4R+XSeRAoGBALVOiGLtxPLn6NkaNBmo\n+2t4yWcTC6AiAfStTH4XIUWnf/pT3xn4lyChOePP0xeD+Ctm73+/WsSYn/of9puh\nF9lp9HACECoL3W/kdCouH1Wi+TeQjloJvD7uocxRZMTHDzB6S5GRPPkxxFCxcx6Q\nVYiFfJnbdVlG0hIFogk9Juos\n-----END PRIVATE KEY-----\n",
+  "client_email": "salessystemgareport@sales-system-ga-report-api.iam.gserviceaccount.com",
+  "client_id": "116050036745183952348",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/salessystemgareport%40sales-system-ga-report-api.iam.gserviceaccount.com"
+}

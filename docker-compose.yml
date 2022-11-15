@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+    server:
+        container_name: apiserver
+        build:
+            context: ./server/
+            dockerfile: Dockerfile
+        restart: always
+        command: node app.js
+        volumes:
+            - "./server/:/usr/src/app"
+            - "/usr/src/app/node_modules"
+        env_file:
+            - ./db/.env
+        # ports:
+        #     - 3001:3000
+    client:
+        container_name: salesui
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        volumes:
+            - "./client/:/app"
+            - "/app/node_modules"
+        ports:
+            - 80:8080
+        command: npm start
+        depends_on:
+            - server
+    maria-db:
+        container_name: salesdb
+        image: mariadb:latest
+        tty: true
+        stdin_open: true
+        privileged: true
+        restart: always
+        ports:
+            - 3306:3306
+        volumes:
+            - "./db/data/:/var/lib/mysql/"
+            - ./db/init/:/docker-entrypoint-initdb.d/
+        env_file:
+            - ./db/.env
+        command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
